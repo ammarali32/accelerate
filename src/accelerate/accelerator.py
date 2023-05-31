@@ -531,7 +531,7 @@ class Accelerator:
         return self.state.mixed_precision
 
     @contextmanager
-    def split_between_processes(self, inputs: list | tuple | dict | torch.Tensor, apply_padding: bool = False):
+    def split_between_processes(self, inputs, apply_padding: bool = False):
         """
         Splits `input` between `self.num_processes` quickly and can be then used on that process. Useful when doing
         distributed inference, such as with different prompts.
