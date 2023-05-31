@@ -2111,7 +2111,7 @@ class Accelerator:
         wait_for_everyone()
 
     @on_main_process
-    def init_trackers(self, project_name: str, config: dict | None = None, init_kwargs: dict | None = {}):
+    def init_trackers(self, project_name: str, config = None, init_kwargs = {}):
         """
         Initializes a run for all trackers stored in `self.log_with`, potentially with starting configurations
 
@@ -2191,7 +2191,7 @@ class Accelerator:
         return GeneralTracker(_blank=True)
 
     @on_main_process
-    def log(self, values: dict, step: int | None = None, log_kwargs: dict | None = {}):
+    def log(self, values: dict, step= None, log_kwargs = {}):
         """
         Logs `values` to all stored trackers in `self.trackers` on the main process only.
 
