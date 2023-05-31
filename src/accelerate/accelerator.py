@@ -248,8 +248,8 @@ class Accelerator:
         dispatch_batches: bool | None = None,
         even_batches: bool = True,
         step_scheduler_with_optimizer: bool = True,
-        kwargs_handlers: list[KwargsHandler] | None = None,
-        dynamo_backend: DynamoBackend | str | None = None,
+        kwargs_handlers = None,
+        dynamo_backend = None,
     ):
         if project_config is not None:
             self.project_configuration = project_config
